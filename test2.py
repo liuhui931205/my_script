@@ -14,5 +14,5 @@ for file_line in fileinput.input():
     output = p.stdout.read().decode('UTF-8')
     print(output)
 # 放弃推送
-print("dddffffffffffffffffffffffffffffczxcxzczxc")
+print("dddfffffffffffdfffffffffffffffffczxcxzczxc")
 sys.exit(1)
