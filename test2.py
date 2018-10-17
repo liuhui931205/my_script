@@ -10,9 +10,12 @@ for file_line in fileinput.input():
     # 推送前的引用指向的内容的SHA-1值，用户准备推送的内容的SHA-1值，引用的名字（分支）
 
     old_hash, new_hash, branch = re.split(r'\s+', file_line.strip('\n'))
-    p = Popen("git show --format='%%cn %%ce %%ct' --no-patch %s" % new_hash, shell=True, stdout=PIPE)
+    p = Popen(
+        "git show --format='%%cn %%ce %%ct' --no-patch %s" % new_hash,
+        shell=True,
+        stdout=PIPE)
     output = p.stdout.read().decode('UTF-8')
     print(output)
 # 放弃推送
-print("dddfffffffffffddddfffffffffffffffffczxcxzczxc")
+print("dddfffffffffffddddffffffffssssssssssfffffffffczxcxzczxc")
 sys.exit(1)
